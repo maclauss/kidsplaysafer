@@ -3,9 +3,9 @@ import { MEDIUM_FROM, LARGE_FROM } from "../constants/mobile";
 
 export const useScreenSize = () => {
   const [deviceWidth, setDeviceWidth] = useState(window.innerWidth);
-  const isSmallSize = deviceWidth < MEDIUM_FROM;
-  const isMediumSize = deviceWidth >= MEDIUM_FROM && deviceWidth < LARGE_FROM;
-  const isLargeSize = deviceWidth >= LARGE_FROM;
+  const isSmallScreen = deviceWidth < MEDIUM_FROM;
+  const isMediumScreen = deviceWidth >= MEDIUM_FROM && deviceWidth < LARGE_FROM;
+  const isLargeScreen = deviceWidth >= LARGE_FROM;
 
   useEffect(() => {
     let timeoutId;
@@ -21,8 +21,8 @@ export const useScreenSize = () => {
   }, []);
 
   return {
-    isSmallSize,
-    isMediumSize,
-    isLargeSize,
+    isSmallScreen,
+    isMediumScreen,
+    isLargeScreen,
   };
 };

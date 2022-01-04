@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 
+import Bangers from "./fonts/Bangers-Regular.ttf";
+
 import ROUTE_NAMES from "./constants/routeNames";
 
 import Home from "./views/pages/Home";
@@ -26,8 +28,13 @@ const App = () => {
 export default App;
 
 const GlobalStyles = createGlobalStyle`
+  @font-face {
+    font-family: 'Bangers';
+    src: url(${Bangers});
+  }
+
   html, body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Bangers', 'Open Sans', sans-serif;
     font-size: 16px;
     padding: 0;
     margin: 0;

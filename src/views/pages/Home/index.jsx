@@ -1,7 +1,7 @@
 import { useScreenSize } from "../../../hooks/useScreenSize";
 
 import { HomeWrapper, StyledLogo, StyledBottom } from "./styled.components";
-import HomeContent from "./components/HomeContent";
+import HomeContent from "../../fragments/HomeContent";
 
 const Home = () => {
   const { isSmallScreen } = useScreenSize();

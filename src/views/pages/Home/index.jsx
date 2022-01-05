@@ -1,6 +1,6 @@
 import { useScreenSize } from "../../../hooks/useScreenSize";
 
-import { HomeWrapper, StyledLogo, StyledBottom } from "./styled.components";
+import { HomeWrapper, StyledTop, StyledBottom } from "./styled.components";
 import HomeContent from "../../fragments/HomeContent";
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
     <HomeWrapper>
       {isSmallScreen && (
         <>
-          <StyledLogo />
+          <StyledTop />
           <StyledBottom />
           <HomeContent />
         </>

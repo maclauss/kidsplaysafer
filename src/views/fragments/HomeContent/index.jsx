@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
+import ROUTE_NAMES from "../../../constants/routeNames";
 import {
   HomeContentWrapper,
   Welcome,
@@ -7,18 +8,22 @@ import {
   LinksWrapper,
   Link,
 } from "./styled.components";
+const { START, ABOUT, CONTACT, SETTINGS } = ROUTE_NAMES;
 
 const HomeContent = () => {
   const navigate = useNavigate();
 
+  const onStartClick = () => {
+    navigate(START);
+  };
   const onAboutClick = () => {
-    navigate("/about");
+    navigate(ABOUT);
   };
   const onContactClick = () => {
-    navigate("/contact");
+    navigate(CONTACT);
   };
   const onSettingsClick = () => {
-    navigate("/settings");
+    navigate(SETTINGS);
   };
 
   const links = [
@@ -30,7 +35,7 @@ const HomeContent = () => {
   return (
     <HomeContentWrapper>
       <Welcome>Welcome!</Welcome>
-      <StartButton>Start</StartButton>
+      <StartButton onClick={onStartClick}>Start</StartButton>
       <LinksWrapper>
         {links.map((link, index) => {
           return (

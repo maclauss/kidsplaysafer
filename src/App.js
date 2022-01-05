@@ -6,10 +6,14 @@ import Bangers from "./fonts/Bangers-Regular.ttf";
 import ROUTE_NAMES from "./constants/routeNames";
 
 import Home from "./views/pages/Home";
+import Start from "./views/pages/Start";
 
-const { HOME } = ROUTE_NAMES;
+const { HOME, START } = ROUTE_NAMES;
 
-const ROUTES = [{ path: HOME, element: <Home />, exact: true }];
+const ROUTES = [
+  { path: HOME, element: <Home />, exact: true },
+  { path: START, element: <Start />, exact: true },
+];
 
 const App = () => {
   return (
@@ -34,13 +38,13 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html, body {
-    font-family: 'Bangers', 'Open Sans', sans-serif;
     font-size: 16px;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
   *, *:before, *:after {
+    font-family: 'Bangers', 'Open Sans', sans-serif;
     box-sizing: inherit;
   }
 `;

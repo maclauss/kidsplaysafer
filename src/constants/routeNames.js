@@ -4,6 +4,7 @@ const ROUTE_NAMES = {
   CONTACT: "/contact",
   SETTINGS: "/settings",
   START: "/start",
+  AVATAR_SELECTION: "/avatar-selection",
 };
 
 export default ROUTE_NAMES;

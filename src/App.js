@@ -7,12 +7,14 @@ import ROUTE_NAMES from "./constants/routeNames";
 
 import Home from "./views/pages/Home";
 import Start from "./views/pages/Start";
+import AvatarSelection from "./views/pages/AvatarSelection";
 
-const { HOME, START } = ROUTE_NAMES;
+const { HOME, START, AVATAR_SELECTION } = ROUTE_NAMES;
 
 const ROUTES = [
   { path: HOME, element: <Home />, exact: true },
   { path: START, element: <Start />, exact: true },
+  { path: AVATAR_SELECTION, element: <AvatarSelection />, exact: true },
 ];
 
 const App = () => {

@@ -1,3 +1,6 @@
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 import styled from "styled-components";
 
 import { ReactComponent as BackButton } from "../../assets/icons/backButton.svg";
@@ -11,15 +14,15 @@ export const StyledBackButton = styled(BackButton)`
   z-index: 2;
 `;
 
-export const StartContentWrapper = styled.div`
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 160px;
+export const AvatarSelectionContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+`;
+
+export const StyledCarousel = styled(Carousel)`
+  margin: 60px 0 30px;
 `;
 
 export const WelcomeMessage = styled.div`
@@ -30,31 +33,11 @@ export const WelcomeMessage = styled.div`
 
 export const Choose = styled.div`
   width: 150px;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   font-size: 55px;
   text-shadow: 3px 3px #42210b;
 
   color: ${({ isParent }) => (isParent ? "#fbae17" : "#00ff00")};
-`;
-
-export const Input = styled.input`
-  border: 0;
-  height: 30px;
-  margin-bottom: 40px;
-  border-bottom: 3px solid #ffffff;
-  outline: none;
-  background: transparent;
-  text-align: center;
-  font-size: 24px;
-
-  &,
-  &::placeholder {
-    color: #ffffff;
-  }
-
-  &:focus::placeholder {
-    color: transparent;
-  }
 `;
 
 export const ChooseAvatar = styled.button`

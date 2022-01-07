@@ -8,7 +8,7 @@ import {
   LinksWrapper,
   Link,
 } from "./styled.components";
-const { START, ABOUT, CONTACT, SETTINGS } = ROUTE_NAMES;
+const { START, ABOUT, CONTACT, RESOURCES } = ROUTE_NAMES;
 
 const HomeContent = () => {
   const navigate = useNavigate();
@@ -22,14 +22,14 @@ const HomeContent = () => {
   const onContactClick = () => {
     navigate(CONTACT);
   };
-  const onSettingsClick = () => {
-    navigate(SETTINGS);
+  const onResourcesClick = () => {
+    navigate(RESOURCES);
   };
 
   const links = [
     { name: "About", onClick: onAboutClick },
     { name: "Contact", onClick: onContactClick },
-    { name: "Settings", onClick: onSettingsClick },
+    { name: "Resources", onClick: onResourcesClick },
   ];
 
   return (

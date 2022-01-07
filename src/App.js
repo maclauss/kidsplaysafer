@@ -7,9 +7,14 @@ import ROUTE_NAMES from "./constants/routeNames";
 
 import Home from "./views/pages/Home";
 
-const { HOME } = ROUTE_NAMES;
+import About from "./views/pages/About";
 
-const ROUTES = [{ path: HOME, element: <Home />, exact: true }];
+const { HOME, ABOUT } = ROUTE_NAMES;
+
+const ROUTES = [
+  { path: HOME, element: <Home />, exact: true },
+  { path: ABOUT, element: <About />, exact: true },
+];
 
 const App = () => {
   return (

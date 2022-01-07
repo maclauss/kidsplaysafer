@@ -7,6 +7,19 @@ const Home = () => {
   const { isSmallScreen } = useScreenSize();
   return (
     <HomeWrapper>
+      {!isSmallScreen && (
+        <div
+          style={{
+            height: "100vh",
+            position: "absolute",
+            top: "50vh",
+            left: "50vh",
+            fontSize: "60px",
+          }}
+        >
+          Desktop version coming soon!
+        </div>
+      )}
       {isSmallScreen && (
         <>
           <StyledTop />

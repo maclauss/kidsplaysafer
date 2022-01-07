@@ -6,14 +6,19 @@ import Bangers from "./fonts/Bangers-Regular.ttf";
 import ROUTE_NAMES from "./constants/routeNames";
 
 import Home from "./views/pages/Home";
-
+import Start from "./views/pages/Start";
+import AvatarSelection from "./views/pages/AvatarSelection";
+import MailerForm from "./views/pages/MailerForm";
 import About from "./views/pages/About";
 
-const { HOME, ABOUT } = ROUTE_NAMES;
+const { HOME, ABOUT, START, AVATAR_SELECTION, MAILER_FORM } = ROUTE_NAMES;
 
 const ROUTES = [
   { path: HOME, element: <Home />, exact: true },
   { path: ABOUT, element: <About />, exact: true },
+  { path: START, element: <Start />, exact: true },
+  { path: AVATAR_SELECTION, element: <AvatarSelection />, exact: true },
+  { path: MAILER_FORM, element: <MailerForm />, exact: true },
 ];
 
 const App = () => {
@@ -39,13 +44,13 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html, body {
-    font-family: 'Bangers', 'Open Sans', sans-serif;
     font-size: 16px;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
   *, *:before, *:after {
+    font-family: 'Bangers', 'Open Sans', sans-serif;
     box-sizing: inherit;
   }
 `;

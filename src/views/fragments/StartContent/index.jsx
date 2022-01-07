@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import ROUTE_NAMES from "../../../constants/routeNames";
 
 import {
   StyledBackButton,
@@ -9,6 +10,8 @@ import {
   Input,
   ChooseAvatar,
 } from "./styled.components";
+
+const { AVATAR_SELECTION } = ROUTE_NAMES;
 
 const usernames = [];
 
@@ -37,7 +40,7 @@ const StartContent = () => {
     if (step < 1) {
       setStep((step) => step + 1);
     } else {
-      navigate("/avatar-selection", { state: { usernames } });
+      navigate(AVATAR_SELECTION, { state: { usernames } });
     }
   };
 
@@ -54,6 +57,7 @@ const StartContent = () => {
         </WelcomeMessage>
         <Choose isParent={isParent}>Choose your avatar!</Choose>
         <Input
+          name="username"
           placeholder="Enter username"
           value={username}
           onChange={handleChange}

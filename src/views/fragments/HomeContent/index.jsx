@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 import ROUTE_NAMES from "../../../constants/routeNames";
+
 import {
   HomeContentWrapper,
   Welcome,
@@ -8,6 +9,7 @@ import {
   LinksWrapper,
   Link,
 } from "./styled.components";
+
 const { START, ABOUT, CONTACT, RESOURCES } = ROUTE_NAMES;
 
 const HomeContent = () => {

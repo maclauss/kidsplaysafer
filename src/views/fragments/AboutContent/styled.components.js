@@ -32,6 +32,8 @@ export const About = styled.div`
 export const ParagraphContainer = styled.div`
   overflow: scroll;
   height: 300px;
+  width: calc(100% - 50px);
+  max-width: 400px;
   padding: 0 20px;
 `;
 

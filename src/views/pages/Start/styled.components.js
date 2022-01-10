@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import Background from "../../assets/icons/background.png";
-import { ReactComponent as Banner } from "../../../views/assets/icons/startBanner.svg";
+import { ReactComponent as Banner } from "../../../views/assets/icons/banner.svg";
 
 export const StartWrapper = styled.div`
   height: 100vh;

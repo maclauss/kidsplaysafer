@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { ReactComponent as Top } from "../../assets/icons/homeTop.svg";
+import { ReactComponent as Top } from "../../assets/icons/logoTop.svg";
 import Background from "../../assets/icons/background.png";
 
 export const AboutWrapper = styled.div`

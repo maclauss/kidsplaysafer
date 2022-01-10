@@ -1,6 +1,13 @@
 import { useScreenSize } from "../../../hooks/useScreenSize";
 
-import { HomeWrapper, StyledTop, StyledBottom } from "./styled.components";
+import Logo from "../../assets/icons/logo.png";
+
+import {
+  HomeWrapper,
+  StyledLogo,
+  StyledTop,
+  StyledBottom,
+} from "./styled.components";
 import HomeContent from "../../fragments/HomeContent";
 
 const Home = () => {
@@ -10,14 +17,16 @@ const Home = () => {
       {!isSmallScreen && (
         <div
           style={{
-            height: "100vh",
             position: "absolute",
             top: "50vh",
-            left: "50vh",
+            left: "50vw",
+            transform: "translate(-50%, -50%)",
             fontSize: "60px",
+            textAlign: "center",
           }}
         >
-          Desktop version coming soon!
+          <StyledLogo src={Logo} />
+          <div>Desktop version coming soon!</div>
         </div>
       )}
       {isSmallScreen && (

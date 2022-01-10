@@ -1,6 +1,6 @@
 import { useScreenSize } from "../../../hooks/useScreenSize";
 
-import { IntroWrapper, StyledTop,StyledBottom } from "./styled.components";
+import { IntroWrapper, StyledTop, StyledBottom } from "./styled.components";
 import IntroductionContent from "../../fragments/IntroductionContent";
 
 const Introduction = () => {
@@ -12,7 +12,6 @@ const Introduction = () => {
           <StyledTop />
           <StyledBottom />
           <IntroductionContent />
-          
         </>
       )}
     </IntroWrapper>

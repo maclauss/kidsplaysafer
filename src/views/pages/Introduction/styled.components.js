@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { ReactComponent as Bottom } from "../../assets/icons/homeBottom.svg";
-import { ReactComponent as Top } from "../../assets/icons/homeTop.svg";
+
 import Background from "../../assets/icons/background.png";
+import { ReactComponent as Top } from "../../assets/icons/homeTop.svg";
+import { ReactComponent as Bottom } from "../../assets/icons/homeBottom.svg";
 
 export const IntroWrapper = styled.div`
   height: 100vh;

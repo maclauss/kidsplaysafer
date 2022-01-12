@@ -10,16 +10,19 @@ import Start from "./views/pages/Start";
 import About from "./views/pages/About";
 import Contact from "./views/pages/Contact";
 import AvatarSelection from "./views/pages/AvatarSelection";
-import MailerForm from "./views/pages/MailerForm";
 import Introduction from "./views/pages/Introduction";
+import Questions from "./views/pages/Questions";
+import MailerForm from "./views/pages/MailerForm";
+
 const {
   HOME,
   START,
   ABOUT,
   CONTACT,
   AVATAR_SELECTION,
-  MAILER_FORM,
   INTRODUCTION,
+  QUESTIONS,
+  MAILER_FORM,
 } = ROUTE_NAMES;
 
 const ROUTES = [
@@ -28,8 +31,9 @@ const ROUTES = [
   { path: ABOUT, element: <About />, exact: true },
   { path: CONTACT, element: <Contact />, exact: true },
   { path: AVATAR_SELECTION, element: <AvatarSelection />, exact: true },
-  { path: MAILER_FORM, element: <MailerForm />, exact: true },
   { path: INTRODUCTION, element: <Introduction />, exact: true },
+  { path: QUESTIONS, element: <Questions />, exact: true },
+  { path: MAILER_FORM, element: <MailerForm />, exact: true },
 ];
 
 const App = () => {

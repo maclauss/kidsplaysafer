@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import Background from "../../assets/icons/background.png";
-import { ReactComponent as Top } from "../../assets/icons/homeTop.svg";
+import { ReactComponent as Top } from "../../assets/icons/logoTop.svg";
 
 export const MailerFormWrapper = styled.div`
   height: 100vh;

@@ -38,8 +38,11 @@ export const ParagraphContainer = styled.div`
 `;
 
 export const Paragraph = styled.div`
-  margin-bottom: 8px;
   font-size: 18px;
   color: #ffffff;
   text-align: justify;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
 `;

@@ -5,9 +5,9 @@ const ROUTE_NAMES = {
   CONTACT: "/contact",
   RESOURCES: "/resources",
   AVATAR_SELECTION: "/avatar-selection",
-  MAILER_FORM: "/mailer",
   INTRODUCTION: "/intro",
   QUESTIONS: "/questions",
+  MAILER_FORM: "/mailer",
 };
 
 export default ROUTE_NAMES;

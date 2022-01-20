@@ -7,6 +7,7 @@ const ROUTE_NAMES = {
   AVATAR_SELECTION: "/avatar-selection",
   INTRODUCTION: "/intro",
   QUESTIONS: "/questions",
+  PLAY_AGAIN: "/play-again",
   MAILER_FORM: "/mailer",
 };
 

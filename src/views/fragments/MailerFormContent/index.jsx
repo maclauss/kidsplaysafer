@@ -12,7 +12,7 @@ import {
   Skip,
 } from "./styled.components";
 
-const { HOME } = ROUTE_NAMES;
+const { PLAY_AGAIN } = ROUTE_NAMES;
 
 const MailerFormContent = () => {
   const navigate = useNavigate();
@@ -34,7 +34,7 @@ const MailerFormContent = () => {
   };
 
   const handleClick = () => {
-    navigate(HOME);
+    navigate(PLAY_AGAIN);
   };
 
   return (

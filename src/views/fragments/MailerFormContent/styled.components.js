@@ -14,6 +14,7 @@ export const MailerFormContentWrapper = styled.div`
 export const Thanks = styled.div`
   width: 220px;
   margin-bottom: 18px;
+  font-family: "Bangers", "Open Sans", sans-serif;
   font-size: 50px;
   color: #00ff00;
   text-shadow: 3px 3px #42210b;

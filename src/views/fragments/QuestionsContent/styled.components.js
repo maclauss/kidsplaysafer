@@ -26,6 +26,7 @@ export const QuestionsContentWrapper = styled.div`
 
 export const QuestionNumber = styled.div`
   margin-bottom: 8px;
+  font-family: "Bangers", "Open Sans", sans-serif;
   font-size: 24px;
   color: #fbae17;
   text-shadow: 3px 3px #42210b;
@@ -38,6 +39,7 @@ export const StyledAvatar = styled.img`
 
 export const YourTurn = styled.div`
   margin-bottom: 30px;
+  font-family: "Bangers", "Open Sans", sans-serif;
   font-size: 50px;
   color: ${({ isParent }) => (isParent ? "#fbae17" : "#00ff00")};
   text-shadow: 3px 3px #42210b;
@@ -62,9 +64,11 @@ export const Question = styled.div`
 export const Choice = styled.div`
   height: 50px;
   width: 250px;
-  padding-left: 15px;
+  padding: 15px;
+  text-align: center;
   border-radius: 50px;
   display: flex;
+  justify-content: center;
   align-items: center;
   background-color: ${({ isSelected, isParent }) =>
     isSelected ? (isParent ? "#fbae17" : "#00ff00") : "#ffffff"};

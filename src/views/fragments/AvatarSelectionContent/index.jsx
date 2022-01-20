@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import AVATARS from "../../../constants/avatars";
+import ROUTE_NAMES from "../../../constants/routeNames";
 
 import {
   StyledBackButton,
@@ -12,21 +13,23 @@ import {
   ChooseAvatar,
 } from "./styled.components";
 
+const { START, INTRODUCTION } = ROUTE_NAMES;
+
 const selections = { parent: 0, child: 0 };
 
 const AvatarSelectionContent = () => {
   const navigate = useNavigate();
   const { state } = useLocation();
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(state?.step ?? 0);
   const [isParent, setIsParent] = useState(false);
   const [selection, setSelection] = useState(0);
   const usernames = state.usernames;
 
   const handleBack = () => {
     if (step < 1) {
-      navigate("/start", { replace: true });
+      navigate(START, { state: { usernames, step: 0 }, replace: true });
     } else {
-      setStep(step - 1);
+      navigate(START, { state: { usernames, step: 1 }, replace: true });
     }
   };
 
@@ -35,9 +38,10 @@ const AvatarSelectionContent = () => {
       selections.child = selection;
       setSelection(0);
       setStep((step) => step + 1);
+      navigate(START, { state: { usernames, selections, step: 1 } });
     } else {
       selections.parent = selection;
-      navigate("/intro", { state: { usernames, selections } });
+      navigate(INTRODUCTION, { state: { usernames, selections } });
     }
   };
 

@@ -13,6 +13,7 @@ export const HomeContentWrapper = styled.div`
 
 export const Welcome = styled.div`
   margin: 16px 0 24px;
+  font-family: "Bangers", "Open Sans", sans-serif;
   font-size: 60px;
   color: #00ff00;
   text-shadow: 3px 3px #42210b;

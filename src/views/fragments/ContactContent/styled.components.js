@@ -26,6 +26,7 @@ export const ContactContentWrapper = styled.div`
 
 export const Contact = styled.div`
   margin-bottom: 48px;
+  font-family: "Bangers", "Open Sans", sans-serif;
   font-size: 60px;
   color: #db24fc;
   text-shadow: 3px 3px #42210b;

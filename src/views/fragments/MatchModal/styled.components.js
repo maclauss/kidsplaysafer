@@ -30,6 +30,7 @@ export const StyledTop = styled(Top)`
 
 export const QuestionNumber = styled.div`
   margin: 36px 0 16px;
+  font-family: "Bangers", "Open Sans", sans-serif;
   font-size: 24px;
   color: #fbae17;
   text-shadow: 3px 3px #42210b;
@@ -38,6 +39,7 @@ export const QuestionNumber = styled.div`
 export const ModalHeader = styled.div`
   width: 300px;
   margin-bottom: 24px;
+  font-family: "Bangers", "Open Sans", sans-serif;
   font-size: 50px;
   color: ${({ isAnswersMatch }) => (isAnswersMatch ? "#00ff00" : "#ed1c24")};
   text-shadow: 3px 3px #42210b;

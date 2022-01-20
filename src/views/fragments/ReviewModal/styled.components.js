@@ -44,6 +44,7 @@ export const StyledBackButton = styled(BackButton)`
 
 export const QuestionNumber = styled.div`
   margin: 36px 0 16px;
+  font-family: "Bangers", "Open Sans", sans-serif;
   font-size: 24px;
   color: #ffffff;
   text-shadow: 3px 3px #42210b;

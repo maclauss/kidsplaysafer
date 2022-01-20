@@ -65,7 +65,8 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   *, *:before, *:after {
-    font-family: 'Bangers', 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
     box-sizing: inherit;
   }
 `;

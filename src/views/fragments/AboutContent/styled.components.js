@@ -24,6 +24,7 @@ export const AboutContentWrapper = styled.div`
 
 export const About = styled.div`
   margin-bottom: 18px;
+  font-family: "Bangers", "Open Sans", sans-serif;
   font-size: 60px;
   color: #db24fc;
   text-shadow: 3px 3px #42210b;
@@ -40,7 +41,7 @@ export const ParagraphContainer = styled.div`
 export const Paragraph = styled.div`
   font-size: 18px;
   color: #ffffff;
-  text-align: justify;
+  text-align: left;
 
   &:not(:last-child) {
     margin-bottom: 16px;

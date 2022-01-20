@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import ROUTE_NAMES from "../../../constants/routeNames";
 
@@ -12,21 +12,21 @@ import {
   ChooseAvatar,
 } from "./styled.components";
 
-const { AVATAR_SELECTION } = ROUTE_NAMES;
-
-const usernames = [];
+const { HOME, AVATAR_SELECTION } = ROUTE_NAMES;
 
 const StartContent = () => {
   const navigate = useNavigate();
-  const [step, setStep] = useState(0);
+  const { state } = useLocation();
+  const [step, setStep] = useState(state?.step ?? 0);
   const [username, setUsername] = useState("");
   const [isParent, setIsParent] = useState(false);
+  const usernames = state?.usernames ?? [];
 
   const handleBack = () => {
     if (step < 1) {
-      navigate("/", { replace: true });
+      navigate(HOME, { replace: true });
     } else {
-      setStep(step - 1);
+      navigate(AVATAR_SELECTION, { state: { usernames } });
     }
   };
 
@@ -40,8 +40,9 @@ const StartContent = () => {
     setUsername("");
     if (step < 1) {
       setStep((step) => step + 1);
-    } else {
       navigate(AVATAR_SELECTION, { state: { usernames } });
+    } else {
+      navigate(AVATAR_SELECTION, { state: { usernames, step } });
     }
   };
 

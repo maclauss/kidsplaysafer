@@ -34,6 +34,7 @@ export const WelcomeMessage = styled.div`
 export const Choose = styled.div`
   width: 150px;
   margin-bottom: 30px;
+  font-family: "Bangers", "Open Sans", sans-serif;
   font-size: 55px;
   text-shadow: 3px 3px #42210b;
 

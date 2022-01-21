@@ -8,12 +8,10 @@ const Start = () => {
 
   return (
     <StartWrapper>
-      {isSmallScreen && (
-        <>
-          <StyledBanner />
-          <StartContent />
-        </>
-      )}
+      <>
+        <StyledBanner isSmallScreen={isSmallScreen} />
+        <StartContent />
+      </>
     </StartWrapper>
   );
 };

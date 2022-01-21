@@ -10,6 +10,7 @@ export const StartWrapper = styled.div`
 `;
 
 export const StyledBanner = styled(Banner)`
+  width: ${({ isSmallScreen }) => (isSmallScreen ? "" : "375px")};
   position: absolute;
   left: 50%;
   transform: translateX(-50%);

@@ -15,7 +15,7 @@ export const StartContentWrapper = styled.div`
   width: 100%;
   position: absolute;
   left: 0;
-  top: 160px;
+  top: 140px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +30,7 @@ export const WelcomeMessage = styled.div`
 
 export const Choose = styled.div`
   width: 150px;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
   font-family: "Bangers", "Open Sans", sans-serif;
   font-size: 55px;
   text-shadow: 3px 3px #42210b;

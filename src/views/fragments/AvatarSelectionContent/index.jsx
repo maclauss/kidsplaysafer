@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useScreenSize } from "../../../hooks/useScreenSize";
 
 import AVATARS from "../../../constants/avatars";
 import ROUTE_NAMES from "../../../constants/routeNames";
 
 import {
+  StyledPrevButton,
+  StyledNextButton,
   StyledBackButton,
   AvatarSelectionContentWrapper,
   StyledCarousel,
@@ -19,6 +22,7 @@ const selections = { parent: 0, child: 0 };
 
 const AvatarSelectionContent = () => {
   const navigate = useNavigate();
+  const { isSmallScreen } = useScreenSize();
   const { state } = useLocation();
   const [step, setStep] = useState(state?.step ?? 0);
   const [isParent, setIsParent] = useState(false);
@@ -50,17 +54,29 @@ const AvatarSelectionContent = () => {
   }, [step]);
 
   const carouselProps = {
+    autoFocus: true,
     centerMode: true,
-    centerSlidePercentage: 60,
+    centerSlidePercentage: isSmallScreen ? 60 : 20,
     infiniteLoop: true,
     onChange: (i) => {
       setSelection(i);
     },
+    ...(!isSmallScreen && {
+      renderArrowPrev: (onClick, label) => (
+        <StyledPrevButton onClick={onClick} title={label} />
+      ),
+    }),
+    ...(!isSmallScreen && {
+      renderArrowNext: (onClick, label) => (
+        <StyledNextButton onClick={onClick} title={label} />
+      ),
+    }),
     selectedItem: selection,
     showArrows: false,
     showStatus: false,
     showIndicators: false,
     showThumbs: false,
+    useKeyboardArrows: true,
   };
 
   return (
@@ -87,7 +103,9 @@ const AvatarSelectionContent = () => {
         <WelcomeMessage>
           {isParent ? "Dear parent," : "Hi, little one!"}
         </WelcomeMessage>
-        <Choose isParent={isParent}>Choose your avatar!</Choose>
+        <Choose isSmallScreen={isSmallScreen} isParent={isParent}>
+          Choose your avatar!
+        </Choose>
         <ChooseAvatar isParent={isParent} onClick={handleSubmit}>
           Select
         </ChooseAvatar>

@@ -4,6 +4,28 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styled from "styled-components";
 
 import { ReactComponent as BackButton } from "../../assets/icons/backButton.svg";
+import { ReactComponent as PrevButton } from "../../assets/icons/backButton.svg";
+import { ReactComponent as NextButton } from "../../assets/icons/nextButton.svg";
+
+export const StyledPrevButton = styled(PrevButton)`
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: calc(40% - 20px);
+  top: 50%;
+  zindex: 2;
+`;
+
+export const StyledNextButton = styled(NextButton)`
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: calc(40% - 20px);
+  top: 50%;
+  border-radius: 50%;
+  background-color: #ffffff;
+  zindex: 2;
+`;
 
 export const StyledBackButton = styled(BackButton)`
   position: absolute;
@@ -32,7 +54,7 @@ export const WelcomeMessage = styled.div`
 `;
 
 export const Choose = styled.div`
-  width: 150px;
+  width: ${({ isSmallScreen }) => (isSmallScreen ? "150px" : "")};
   margin-bottom: 30px;
   font-family: "Bangers", "Open Sans", sans-serif;
   font-size: 55px;

@@ -12,7 +12,7 @@ export const Username = styled.div`
   font-size: 18px;
   line-height: 50px;
   text-align: center;
-  z-index: 2;
+  z-index: 3;
 `;
 
 export const QuestionsContentWrapper = styled.div`
@@ -22,7 +22,7 @@ export const QuestionsContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 2;
+  z-index: 3;
 `;
 
 export const QuestionNumber = styled.div`

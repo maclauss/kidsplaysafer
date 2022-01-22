@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 import Background from "../../assets/icons/background.png";
 import { ReactComponent as Top } from "../../assets/icons/confettiTop.svg";
+import { ReactComponent as DesktopTop } from "../../assets/icons/blackTop.svg";
+import { ReactComponent as desktopConfetti } from "../../assets/icons/desktopConfetti.svg";
+import { ReactComponent as DesktopBottom } from "../../assets/icons/console.svg";
 
 export const MatchModalWrapper = styled.div`
   height: 100vh;
@@ -18,7 +21,7 @@ export const MatchModalWrapper = styled.div`
 
   &,
   & > * {
-    z-index: 2;
+    z-index: 3;
   }
 `;
 
@@ -28,8 +31,29 @@ export const StyledTop = styled(Top)`
   transform: translateX(-50%);
 `;
 
+export const StyledDesktopTop = styled(DesktopTop)`
+  width: 40%;
+`;
+
+export const StyledConfetti = styled(desktopConfetti)`
+  width: 1200px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+`;
+
+export const StyledDesktopBottom = styled(DesktopBottom)`
+  position: absolute;
+  left: 50%;
+  top: 60px;
+  transform: translateX(-50%);
+  z-index: 2;
+`;
+
 export const QuestionNumber = styled.div`
   margin: 36px 0 16px;
+  margin-top: ${({ isSmallScreen }) => (isSmallScreen ? "" : "80px")};
   font-family: "Bangers", "Open Sans", sans-serif;
   font-size: 24px;
   color: #fbae17;
@@ -46,8 +70,8 @@ export const ModalHeader = styled.div`
 `;
 
 export const ModalContent = styled.div`
-  width: 240px;
-  margin-bottom: 280px;
+  width: ${({ isSmallScreen }) => (isSmallScreen ? "240px" : "350px")};
+  margin-bottom: ${({ isSmallScreen }) => (isSmallScreen ? "280px" : "24px")};
   font-size: 24px;
   color: #ffffff;
 `;
@@ -58,6 +82,7 @@ export const AvatarWrapper = styled.div`
 `;
 
 export const StyledAvatar = styled.img`
+  margin: ${({ isSmallScreen }) => (isSmallScreen ? "" : "0 150px")};
   height: 150px;
   width: 150px;
 `;

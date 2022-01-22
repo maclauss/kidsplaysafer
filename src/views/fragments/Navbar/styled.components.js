@@ -9,7 +9,7 @@ export const NavbarWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  z-index: 2;
+  z-index: 3;
 `;
 
 export const Link = styled.button`

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useScreenSize } from "../../../hooks/useScreenSize";
 
 import AVATARS from "../../../constants/avatars";
 import ROUTE_NAMES from "../../../constants/routeNames";
@@ -25,6 +26,7 @@ const answers = [];
 const QuestionsContent = () => {
   const navigate = useNavigate();
   const { state } = useLocation();
+  const { isSmallScreen } = useScreenSize();
   const [choices, setChoices] = useState([]);
   const [step, setStep] = useState(0);
   const [questionNumber, setQuestionNumber] = useState(1);
@@ -76,13 +78,17 @@ const QuestionsContent = () => {
 
   return (
     <>
-      <Username>{isParent ? parentUsername : childUsername}</Username>
-      <QuestionsContentWrapper>
+      <Username isParent={isParent} isSmallScreen={isSmallScreen}>
+        {isParent ? parentUsername : childUsername}
+      </Username>
+      <QuestionsContentWrapper isSmallScreen={isSmallScreen}>
         <QuestionNumber>Question {questionNumber}/5</QuestionNumber>
         <StyledAvatar src={isParent ? parentAvatar : childAvatar} />
         <YourTurn isParent={isParent}>It's your turn</YourTurn>
         <>
-          <Question>{questions[questionNumber - 1].question}</Question>
+          <Question isSmallScreen={isSmallScreen}>
+            {questions[questionNumber - 1].question}
+          </Question>
           {choices.map((choice, i) => {
             return (
               <Choice
@@ -90,6 +96,7 @@ const QuestionsContent = () => {
                 onClick={() => handleSelect(i)}
                 isParent={isParent}
                 isSelected={selected === i}
+                isSmallScreen={isSmallScreen}
               >{`(${["A", "B", "C", "D"][i]}) ${choice}`}</Choice>
             );
           })}

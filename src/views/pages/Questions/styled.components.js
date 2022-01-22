@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 import Background from "../../assets/icons/background.png";
 import { ReactComponent as Top } from "../../assets/icons/top.svg";
+import { ReactComponent as DesktopTop } from "../../assets/icons/desktopTop.svg";
 import { ReactComponent as Bottom } from "../../assets/icons/bottom.svg";
+import { ReactComponent as DesktopBottom } from "../../assets/icons/desktopBottom.svg";
 
 export const QuestionsWrapper = styled.div`
   height: 100vh;
@@ -19,5 +21,16 @@ export const StyledTop = styled(Top)`
 export const StyledBottom = styled(Bottom)`
   position: absolute;
   bottom: -16px;
-  left: 0;
+`;
+
+export const StyledDesktopTop = styled(DesktopTop)`
+  width: 40%;
+`;
+
+export const StyledDesktopBottom = styled(DesktopBottom)`
+  width: 60%;
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
 `;

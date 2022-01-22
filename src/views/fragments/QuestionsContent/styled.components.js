@@ -6,22 +6,23 @@ export const Username = styled.div`
   height: 50px;
   width: 160px;
   position: absolute;
-  left: 0;
-  top: 80px;
-  background-color: #00ff00;
+  left: ${({ isSmallScreen }) => (isSmallScreen ? "0" : "calc(50% + 24px)")};
+  top: ${({ isSmallScreen }) => (isSmallScreen ? "80px" : "150px")};
+  background-color: ${({ isParent }) => (isParent ? "#fbae17" : "#00ff00")};
   font-size: 18px;
   line-height: 50px;
   text-align: center;
+  z-index: 2;
 `;
 
 export const QuestionsContentWrapper = styled.div`
   width: 100%;
   position: absolute;
-  left: 0;
-  top: 36px;
+  top: ${({ isSmallScreen }) => (isSmallScreen ? "36px" : "80px")};
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 2;
 `;
 
 export const QuestionNumber = styled.div`
@@ -48,7 +49,7 @@ export const YourTurn = styled.div`
 export const Question = styled.div`
   min-height: 100px;
   max-height: 150px;
-  width: 250px;
+  width: ${({ isSmallScreen }) => (isSmallScreen ? "250px" : "600px")};
   padding: 10px;
   margin-bottom: 16px;
   border-radius: 15px;
@@ -63,7 +64,7 @@ export const Question = styled.div`
 
 export const Choice = styled.div`
   height: 50px;
-  width: 250px;
+  width: ${({ isSmallScreen }) => (isSmallScreen ? "250px" : "600px")};
   padding: 15px;
   text-align: center;
   border-radius: 50px;

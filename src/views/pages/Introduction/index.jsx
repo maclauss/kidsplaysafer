@@ -2,10 +2,10 @@ import { useScreenSize } from "../../../hooks/useScreenSize";
 
 import {
   IntroWrapper,
-  StyledTop,
-  StyledBottom,
   StyledDesktopTop,
   StyledDesktopBottom,
+  StyledTop,
+  StyledBottom,
 } from "./styled.components";
 import Navbar from "../../fragments/Navbar";
 import IntroductionContent from "../../fragments/IntroductionContent";
@@ -16,12 +16,19 @@ const Introduction = () => {
     <IntroWrapper>
       <>
         {!isSmallScreen && (
-          <Navbar>
-            <StyledDesktopTop />
-          </Navbar>
+          <>
+            <Navbar>
+              <StyledDesktopTop />
+            </Navbar>
+            <StyledDesktopBottom />
+          </>
         )}
-        {isSmallScreen && <StyledTop />}
-        {isSmallScreen ? <StyledBottom /> : <StyledDesktopBottom />}
+        {isSmallScreen && (
+          <>
+            <StyledTop />
+            <StyledBottom />
+          </>
+        )}
         <IntroductionContent />
       </>
     </IntroWrapper>

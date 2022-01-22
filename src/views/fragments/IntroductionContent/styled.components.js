@@ -38,11 +38,12 @@ export const Intro = styled.div`
 `;
 
 export const AvatarImage = styled.img`
-  width: 30%;
+  width: ${({ isSmallScreen }) => (isSmallScreen ? "30%" : "200px")};
 `;
 
 export const ParagraphContainer = styled.div`
-  width: calc(100% - 50px);
+  width: ${({ isSmallScreen }) =>
+    isSmallScreen ? "calc(100% - 50px)" : "500px"};
   padding: 10px;
   border-radius: 15px;
   background-color: #db24fc;

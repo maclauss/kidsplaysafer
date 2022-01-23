@@ -3,17 +3,24 @@ import styled from "styled-components";
 import { ReactComponent as BackButton } from "../../assets/icons/backButton.svg";
 import { ReactComponent as Top } from "../../assets/icons/altTop.svg";
 import { ReactComponent as Bottom } from "../../assets/icons/bottom.svg";
+import { ReactComponent as DesktopBottom } from "../../assets/icons/desktopAltBottom.svg";
 
 export const StyledTop = styled(Top)`
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  width: ${({ isSmallScreen }) => (isSmallScreen ? "" : "500px")};
+  position: ${({ isSmallScreen }) => (isSmallScreen ? "absolute" : "")};
+  left: ${({ isSmallScreen }) => (isSmallScreen ? "50%" : "")};
+  transform: ${({ isSmallScreen }) =>
+    isSmallScreen ? "translateX(-50%)" : "translateY(-40%)"};
 `;
 
 export const StyledBottom = styled(Bottom)`
   position: absolute;
   bottom: -16px;
-  left: 0;
+`;
+
+export const StyledDesktopBottom = styled(DesktopBottom)`
+  position: absolute;
+  bottom: 0;
 `;
 
 export const ReviewModalWrapper = styled.div`
@@ -44,6 +51,7 @@ export const StyledBackButton = styled(BackButton)`
 
 export const QuestionNumber = styled.div`
   margin: 36px 0 16px;
+  margin-top: ${({ isSmallScreen }) => (isSmallScreen ? "" : "80px")};
   font-family: "Bangers", "Open Sans", sans-serif;
   font-size: 24px;
   color: #ffffff;
@@ -51,8 +59,14 @@ export const QuestionNumber = styled.div`
 `;
 
 export const Question = styled.div`
-  width: 250px;
+  height: ${({ isSmallScreen }) => (isSmallScreen ? "" : "100px")};
+  width: ${({ isSmallScreen }) => (isSmallScreen ? "250px" : "600px")};
+  padding: ${({ isSmallScreen }) => (isSmallScreen ? "" : "15px 40px")};
+  border-radius: ${({ isSmallScreen }) => (isSmallScreen ? "" : "15px")};
+  position: ${({ isSmallScreen }) => (isSmallScreen ? "" : "absolute")};
+  top: ${({ isSmallScreen }) => (isSmallScreen ? "" : "330px")};
   color: #ffffff;
+  background-color: ${({ isSmallScreen }) => (isSmallScreen ? "" : "#db24fc")};
   font-size: 20px;
   text-align: center;
 `;
@@ -60,14 +74,16 @@ export const Question = styled.div`
 export const AvatarWrapper = styled.div`
   width: 100%;
   position: absolute;
-  top: 180px;
+  top: ${({ isSmallScreen }) => (isSmallScreen ? "180px" : "280px")};
   display: flex;
-  justify-content: space-between;
+  justify-content: ${({ isSmallScreen }) =>
+    isSmallScreen ? "space-between" : "center"};
 `;
 
 export const StyledAvatar = styled.img`
   height: 150px;
   width: 150px;
+  margin: ${({ isSmallScreen }) => (isSmallScreen ? "" : "0 250px")};
 `;
 
 export const ModalContent = styled.div`
@@ -82,6 +98,7 @@ export const ChoiceWrapper = styled.div`
   > img {
     height: 50px;
     width: 50px;
+    margin: 0;
   }
 
   &:not(:last-child) {
@@ -96,7 +113,7 @@ export const Blank = styled.div`
 
 export const Choice = styled.div`
   height: 50px;
-  width: 250px;
+  width: ${({ isSmallScreen }) => (isSmallScreen ? "250px" : "600px")};
   padding-left: 15px;
   border-radius: 50px;
   display: flex;

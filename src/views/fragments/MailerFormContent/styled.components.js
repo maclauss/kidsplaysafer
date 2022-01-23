@@ -4,7 +4,7 @@ export const MailerFormContentWrapper = styled.div`
   width: 100%;
   position: absolute;
   left: 0;
-  top: 190px;
+  top: ${({ isSmallScreen }) => (isSmallScreen ? "190px" : "250px")};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +12,7 @@ export const MailerFormContentWrapper = styled.div`
 `;
 
 export const Thanks = styled.div`
-  width: 220px;
+  width: ${({ isSmallScreen }) => (isSmallScreen ? "220px" : "600px")};
   margin-bottom: 18px;
   font-family: "Bangers", "Open Sans", sans-serif;
   font-size: 50px;
@@ -21,7 +21,7 @@ export const Thanks = styled.div`
 `;
 
 export const SignUp = styled.div`
-  width: 200px;
+  width: ${({ isSmallScreen }) => (isSmallScreen ? "200px" : "400px")};
   margin-bottom: 16px;
   color: #ffffff;
 `;
@@ -29,7 +29,7 @@ export const SignUp = styled.div`
 export const Input = styled.input`
   border: 0;
   height: 40px;
-  width: 300px;
+  width: ${({ isSmallScreen }) => (isSmallScreen ? "300px" : "600px")};
   padding-left: 18px;
   margin-bottom: 8px;
   outline: none;
@@ -39,7 +39,7 @@ export const Input = styled.input`
 
 export const Submit = styled.button`
   height: 40px;
-  width: 300px;
+  width: ${({ isSmallScreen }) => (isSmallScreen ? "300px" : "600px")};
   margin-bottom: 18px;
   border-radius: 50px;
   border: none;

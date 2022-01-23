@@ -1,18 +1,31 @@
 import { useScreenSize } from "../../../hooks/useScreenSize";
 
-import { MailerFormWrapper, StyledTop } from "./styled.components";
+import {
+  MailerFormWrapper,
+  StyledTop,
+  StyledDesktopTop,
+  StyledConfetti,
+  DesktopBackground,
+} from "./styled.components";
 import MailerFormContent from "../../fragments/MailerFormContent";
+import Navbar from "../../fragments/Navbar";
 
 const MailerForm = () => {
   const { isSmallScreen } = useScreenSize();
   return (
     <MailerFormWrapper>
-      {isSmallScreen && (
+      {isSmallScreen ? (
+        <StyledTop />
+      ) : (
         <>
-          <StyledTop />
-          <MailerFormContent />
+          <Navbar>
+            <StyledDesktopTop />
+          </Navbar>
+          <StyledConfetti />
+          <DesktopBackground />
         </>
       )}
+      <MailerFormContent />
     </MailerFormWrapper>
   );
 };

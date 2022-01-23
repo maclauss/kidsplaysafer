@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useScreenSize } from "../../../hooks/useScreenSize";
 
 import ROUTE_NAMES from "../../../constants/routeNames";
 
@@ -16,6 +17,7 @@ const { PLAY_AGAIN } = ROUTE_NAMES;
 
 const MailerFormContent = () => {
   const navigate = useNavigate();
+  const { isSmallScreen } = useScreenSize();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
@@ -38,9 +40,11 @@ const MailerFormContent = () => {
   };
 
   return (
-    <MailerFormContentWrapper>
-      <Thanks>Thanks for playing! Well Done!</Thanks>
-      <SignUp>
+    <MailerFormContentWrapper isSmallScreen={isSmallScreen}>
+      <Thanks isSmallScreen={isSmallScreen}>
+        Thanks for playing! Well Done!
+      </Thanks>
+      <SignUp isSmallScreen={isSmallScreen}>
         Sign up here if you want to receive alerts and be part of the community
         to build this tool.
       </SignUp>
@@ -49,14 +53,16 @@ const MailerFormContent = () => {
         placeholder="Name"
         value={name}
         onChange={handleChange}
+        isSmallScreen={isSmallScreen}
       />
       <Input
         name="email"
         placeholder="Email address"
         value={email}
         onChange={handleChange}
+        isSmallScreen={isSmallScreen}
       />
-      <Submit>Submit</Submit>
+      <Submit isSmallScreen={isSmallScreen}>Submit</Submit>
       <Skip onClick={handleClick}>Skip</Skip>
     </MailerFormContentWrapper>
   );

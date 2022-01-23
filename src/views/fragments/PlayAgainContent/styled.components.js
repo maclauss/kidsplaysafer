@@ -4,7 +4,7 @@ export const PlayAgainContentWrapper = styled.div`
   width: 100%;
   position: absolute;
   left: 0;
-  top: 190px;
+  top: ${({ isSmallScreen }) => (isSmallScreen ? "190px" : "230px")};
   display: flex;
   flex-direction: column;
   align-items: center;

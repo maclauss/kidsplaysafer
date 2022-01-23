@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useScreenSize } from "../../../hooks/useScreenSize";
 
 import ROUTE_NAMES from "../../../constants/routeNames";
 
@@ -14,13 +15,14 @@ const { START } = ROUTE_NAMES;
 
 const PlayAgainContent = () => {
   const navigate = useNavigate();
+  const { isSmallScreen } = useScreenSize();
 
   const onStartClick = () => {
     navigate(START);
   };
 
   return (
-    <PlayAgainContentWrapper>
+    <PlayAgainContentWrapper isSmallScreen={isSmallScreen}>
       <PlayAgainHeader>Play Again?</PlayAgainHeader>
       <StartButton onClick={onStartClick}>Start</StartButton>
       <Share>Share this game with your friends!</Share>

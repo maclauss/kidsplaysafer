@@ -1,7 +1,10 @@
+import { useScreenSize } from "../../../hooks/useScreenSize";
+
 import {
   StyledBackButton,
   StyledTop,
   StyledBottom,
+  StyledDesktopBottom,
   ReviewModalWrapper,
   QuestionNumber,
   Question,
@@ -12,6 +15,7 @@ import {
   Choice,
   Blank,
 } from "./styled.components";
+import Navbar from "../Navbar";
 
 const ReviewModal = ({
   avatars,
@@ -21,32 +25,41 @@ const ReviewModal = ({
   choices,
   handleBack,
 }) => {
+  const { isSmallScreen } = useScreenSize();
   const { childAvatar, parentAvatar } = avatars;
   const { childAnswer, parentAnswer } = answers;
 
   return (
     <ReviewModalWrapper>
       <StyledBackButton onClick={handleBack} />
-      <StyledTop />
-      <StyledBottom />
-      <QuestionNumber>Question {questionNumber}/5</QuestionNumber>
-      <Question>{question}</Question>
-      <AvatarWrapper>
-        <StyledAvatar src={childAvatar} />
-        <StyledAvatar src={parentAvatar} />
+      {isSmallScreen ? (
+        <StyledTop isSmallScreen={isSmallScreen} />
+      ) : (
+        <Navbar style={{ zIndex: "10" }}>
+          <StyledTop />
+        </Navbar>
+      )}
+      {isSmallScreen ? <StyledBottom /> : <StyledDesktopBottom />}
+      <QuestionNumber isSmallScreen={isSmallScreen}>
+        Question {questionNumber}/5
+      </QuestionNumber>
+      <Question isSmallScreen={isSmallScreen}>{question}</Question>
+      <AvatarWrapper isSmallScreen={isSmallScreen}>
+        <StyledAvatar isSmallScreen={isSmallScreen} src={childAvatar} />
+        <StyledAvatar isSmallScreen={isSmallScreen} src={parentAvatar} />
       </AvatarWrapper>
       <ModalContent>
         {choices.map((choice, i) => {
           return (
-            <ChoiceWrapper>
+            <ChoiceWrapper key={`choice-${i}`}>
               {childAnswer === choice ? (
                 <StyledAvatar src={childAvatar} />
               ) : (
                 <Blank />
               )}
-              <Choice key={`choice-${i}`}>
-                {`(${["A", "B", "C", "D"][i]}) ${choice}`}
-              </Choice>
+              <Choice isSmallScreen={isSmallScreen}>{`(${
+                ["A", "B", "C", "D"][i]
+              }) ${choice}`}</Choice>
               {parentAnswer === choice ? (
                 <StyledAvatar isParent={true} src={parentAvatar} />
               ) : (

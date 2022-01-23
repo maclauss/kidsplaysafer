@@ -26,15 +26,6 @@ const QUESTIONS = [
       "Don't give the phone number",
     ],
   },
-
-  {
-    question: "Your friend asks to meet outside. What should you do?",
-    answers: [
-      "Ask mummy/daddy if it is ok",
-      "Go meet my friend",
-      "Don't meet your friend",
-    ],
-  },
   {
     question: "Your friend wants to see your house. What should you do?",
     answers: [
@@ -52,7 +43,6 @@ const QUESTIONS = [
       "Don't want to play",
     ],
   },
-
   {
     question:
       "Your friend asks you to play a different game. What should you do?",

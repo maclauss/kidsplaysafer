@@ -62,8 +62,10 @@ const IntroductionContent = () => {
           </Paragraph>
           <Paragraph>Let's answer some online safety questions!</Paragraph>
         </ParagraphContainer>
+        
       </IntroductionContentWrapper>
-      <StyledNextButton onClick={handleNext} />
+      <StyledNextButton isSmallScreen={isSmallScreen} onClick={handleNext} />
+      
     </>
   );
 };

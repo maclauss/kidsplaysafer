@@ -67,7 +67,7 @@ export const Paragraph = styled.div`
 export const StyledNextButton = styled(NextButton)`
   position: absolute;
   left: 50%;
-  bottom: 30px;
+  top: ${({ isSmallScreen }) => (isSmallScreen ? "620px" : "690px")};
   transform: translateX(-50%);
   height: 35px;
   width: 35px;

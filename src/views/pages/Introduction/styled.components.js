@@ -20,7 +20,7 @@ export const StyledTop = styled(Top)`
 
 export const StyledBottom = styled(Bottom)`
   position: absolute;
-  bottom: -16px;
+  bottom: -180px;
 `;
 
 export const StyledDesktopTop = styled(DesktopTop)`

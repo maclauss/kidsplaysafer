@@ -62,9 +62,19 @@ export const Question = styled.div`
   text-align: center;
 `;
 
+export const ChoiceWrapper = styled.div`
+  max-height: 200px;
+  width: ${({ isSmallScreen }) => (isSmallScreen ? "280px" : "600px")};
+  display: flex;
+  padding-top: 5px;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+`;
+
 export const Choice = styled.div`
   height: 50px;
-  width: ${({ isSmallScreen }) => (isSmallScreen ? "250px" : "600px")};
+  width: ${({ isSmallScreen }) => (isSmallScreen ? "280px" : "560px")};
   padding: 15px;
   text-align: center;
   border-radius: 50px;
@@ -83,11 +93,11 @@ export const Choice = styled.div`
 export const StyledNextButton = styled(NextButton)`
   position: absolute;
   left: 50%;
-  bottom: 30px;
+  top: ${({ isSmallScreen }) => (isSmallScreen ? "610px" : "650px")};
   transform: translateX(-50%);
   height: 35px;
   width: 35px;
   border-radius: 50%;
   background-color: ${({ isParent }) => (isParent ? "#fbae17" : "#00ff00")};
-  z-index: 2;
+  z-index: 3;
 `;

@@ -57,15 +57,16 @@ const StartContent = () => {
         <WelcomeMessage>
           {isParent ? "Dear parent," : "Hi, little one!"}
         </WelcomeMessage>
-        <Choose isParent={isParent}>Choose your avatar!</Choose>
+        <Choose isParent={isParent}>Enter your name!</Choose>
         <Input
+          type="text"
           name="username"
-          placeholder="Enter username"
+          placeholder="Enter your Name"
           value={username}
           onChange={handleChange}
         />
         <ChooseAvatar isParent={isParent} onClick={handleSubmit}>
-          Choose Avatar
+          Enter Username
         </ChooseAvatar>
       </StartContentWrapper>
     </>

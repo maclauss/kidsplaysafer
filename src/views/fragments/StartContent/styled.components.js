@@ -56,6 +56,11 @@ export const Input = styled.input`
   &:focus::placeholder {
     color: transparent;
   }
+
+  &:focus {
+    color: black;
+    border-bottom: 3px solid black;
+  }
 `;
 
 export const ChooseAvatar = styled.button`

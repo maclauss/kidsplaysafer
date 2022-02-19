@@ -91,9 +91,7 @@ Both you (the parent) and your child will each answer the same list of questions
 <br></br><br></br>Remember to use this opportunity to connect with your child by having early and frequent discussions about online safety, so that they will instinctively approach you when in doubt.<br></br></h4> 
 </Paragraph>
 </ParagraphContainer2>
-</> }
-
-         
+</> }    
         
         <StepText>step {step+1} / 2</StepText>
       </IntroductionContentWrapper>

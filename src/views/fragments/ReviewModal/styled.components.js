@@ -49,6 +49,23 @@ export const StyledBackButton = styled(BackButton)`
   z-index: 4;
 `;
 
+export const StyledBackButton2 = styled(BackButton)`
+  position: absolute;
+  bottom: 50px;
+  height: 35px;
+  width: 35px;
+  z-index: 4;
+`;
+
+export const StyledBackButtonSideText = styled.p`
+  position: absolute;
+  bottom: 25px;
+  margin-left: 80px;
+  height: 35px;
+  width: 35px;
+  color: white;
+  z-index: 4;
+`;
 export const QuestionNumber = styled.div`
   margin: 36px 0 16px;
   margin-top: ${({ isSmallScreen }) => (isSmallScreen ? "" : "80px")};

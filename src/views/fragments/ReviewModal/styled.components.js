@@ -20,11 +20,11 @@ export const StyledBottom = styled(Bottom)`
 
 export const StyledDesktopBottom = styled(DesktopBottom)`
   position: absolute;
-  bottom: 0;
+  bottom: -30px;
 `;
 
 export const ReviewModalWrapper = styled.div`
-  height: 100vh;
+  height: 105vh;
   width: 100%;
   background-color: #000000;
   position: absolute;

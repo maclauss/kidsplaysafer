@@ -15,7 +15,7 @@ export const StyledTop = styled(Top)`
 
 export const StyledBottom = styled(Bottom)`
   position: absolute;
-  bottom: -16px;
+  bottom: -5px;
 `;
 
 export const StyledDesktopBottom = styled(DesktopBottom)`
@@ -130,7 +130,7 @@ export const Blank = styled.div`
 
 export const Choice = styled.div`
   height: 50px;
-  width: ${({ isSmallScreen }) => (isSmallScreen ? "250px" : "600px")};
+  width: ${({ isSmallScreen }) => (isSmallScreen ? "265px" : "600px")};
   padding-left: 15px;
   border-radius: 50px;
   display: flex;

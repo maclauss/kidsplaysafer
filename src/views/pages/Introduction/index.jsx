@@ -9,11 +9,13 @@ import {
 } from "./styled.components";
 import Navbar from "../../fragments/Navbar";
 import IntroductionContent from "../../fragments/IntroductionContent";
+import { useEffect } from "react";
 
 const Introduction = () => {
   const { isSmallScreen } = useScreenSize();
+  
   return (
-    <IntroWrapper>
+    <IntroWrapper isSmallScreen={isSmallScreen}	>
       <>
         {!isSmallScreen && (
           <>

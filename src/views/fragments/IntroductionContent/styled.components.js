@@ -16,13 +16,16 @@ export const IntroductionContentWrapper = styled.div`
   width: 100%;
   position: absolute;
   left: 0;
-  top: 190px;
+  top: 175px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 `;
-
+export const ListItem = styled.li`
+  text-align: left;
+  margin: 5px;
+`;
 export const ImageWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -44,11 +47,27 @@ export const AvatarImage = styled.img`
 export const ParagraphContainer = styled.div`
   width: ${({ isSmallScreen }) =>
     isSmallScreen ? "calc(100% - 50px)" : "500px"};
-  padding: 10px;
+  padding: 5px;
   border-radius: 15px;
   background-color: #db24fc;
   color: #ffffff;
   text-align: center;
+  max-height: 235px;
+  overflow: auto;
+  margin-bottom: 10px;
+`;
+
+export const ParagraphContainer2 = styled.div`
+  width: ${({ isSmallScreen }) =>
+    isSmallScreen ? "calc(100% - 50px)" : "500px"};
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #db24fc;
+  color: #ffffff;
+  text-align: center;
+  max-height: 235px;
+  overflow: auto;
+  margin-bottom: 10px;
 `;
 
 export const ParagraphHeader = styled.div`
@@ -58,12 +77,15 @@ export const ParagraphHeader = styled.div`
 
 export const Paragraph = styled.div`
   font-size: 20px;
-
+  color: white;
   &:not(:last-child) {
-    margin-bottom: 8px;
   }
 `;
-
+export const StepText = styled.div`
+  margin-top: 3px;
+  color: white;
+  font-size: 0.8rem;
+`;
 export const StyledNextButton = styled(NextButton)`
   position: absolute;
   left: 50%;
@@ -73,5 +95,19 @@ export const StyledNextButton = styled(NextButton)`
   width: 35px;
   border-radius: 50%;
   background-color: #00ff00;
+  margin-top: ${({ isSmallScreen }) => (isSmallScreen ? "25px" : "55px")};
+  z-index: 2;
+`;
+
+export const StyledNextButton2 = styled.button`
+  position: absolute;
+  left: 50%;
+  top: ${({ isSmallScreen }) => (isSmallScreen ? "620px" : "690px")};
+  transform: translateX(-50%);
+  height: 35px;
+  width: 150px;
+  border-radius: 25px;
+  background-color: #00ff00;
+  margin-top: ${({ isSmallScreen }) => (isSmallScreen ? "25px" : "55px")};
   z-index: 2;
 `;

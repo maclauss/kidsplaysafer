@@ -1,7 +1,6 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useScreenSize } from "../../../hooks/useScreenSize";
-
 import ROUTE_NAMES from "../../../constants/routeNames";
 import AVATARS from "../../../constants/avatars";
 

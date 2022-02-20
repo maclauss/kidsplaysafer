@@ -14,6 +14,7 @@ import Introduction from "./views/pages/Introduction";
 import Questions from "./views/pages/Questions";
 import PlayAgain from "./views/pages/PlayAgain";
 import MailerForm from "./views/pages/MailerForm";
+import Resources from "./views/pages/Resources";
 
 const {
   HOME,
@@ -25,6 +26,7 @@ const {
   QUESTIONS,
   PLAY_AGAIN,
   MAILER_FORM,
+  RESOURCES,
 } = ROUTE_NAMES;
 
 const ROUTES = [
@@ -37,6 +39,7 @@ const ROUTES = [
   { path: QUESTIONS, element: <Questions />, exact: true },
   { path: PLAY_AGAIN, element: <PlayAgain />, exact: true },
   { path: MAILER_FORM, element: <MailerForm />, exact: true },
+  { path: RESOURCES, element: <Resources />, exact: true },
 ];
 
 const App = () => {
@@ -66,6 +69,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
   }
   *, *:before, *:after {
     font-family: 'Open Sans', sans-serif;

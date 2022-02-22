@@ -60,7 +60,7 @@ export const StyledBackButton2 = styled(BackButton)`
 export const StyledBackButtonSideText = styled.p`
   position: absolute;
   bottom: 25px;
-  margin-left: 80px;
+  margin-left: 100px;
   height: 35px;
   width: 35px;
   color: white;

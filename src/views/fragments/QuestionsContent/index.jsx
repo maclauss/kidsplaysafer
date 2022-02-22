@@ -75,7 +75,6 @@ const QuestionsContent = () => {
 
   useEffect(() => {
     setIsParent(step % 2 !== 0);
-    
   }, [step]);
 
   return (
@@ -87,30 +86,32 @@ const QuestionsContent = () => {
         <QuestionNumber>Question {questionNumber}/5</QuestionNumber>
         <StyledAvatar src={isParent ? parentAvatar : childAvatar} />
         <YourTurn isParent={isParent}>It's your turn</YourTurn>
-        
+
         <>
           <Question isSmallScreen={isSmallScreen}>
             {questions[questionNumber - 1].question}
           </Question>
           <ChoiceWrapper isSmallScreen={isSmallScreen}>
-          {choices.map((choice, i) => {
-            return (
-             
-              <Choice
-                key={`choice-${i}`}
-                onClick={() => handleSelect(i)}
-                isParent={isParent}
-                isSelected={selected === i}
-                isSmallScreen={isSmallScreen}
-              >{`(${["A", "B", "C", "D"][i]}) ${choice}`}</Choice>
-              
-            );
-          })}
-         </ChoiceWrapper>
-        </>    
+            {choices.map((choice, i) => {
+              return (
+                <Choice
+                  key={`choice-${i}`}
+                  onClick={() => handleSelect(i)}
+                  isParent={isParent}
+                  isSelected={selected === i}
+                  isSmallScreen={isSmallScreen}
+                >{`(${["A", "B", "C", "D"][i]}) ${choice}`}</Choice>
+              );
+            })}
+          </ChoiceWrapper>
+        </>
       </QuestionsContentWrapper>
       {/* TODO - refactor isParent prop on next button */}
-      <StyledNextButton isParent={isParent} isSmallScreen={isSmallScreen} onClick= {handleNext} />
+      <StyledNextButton
+        isParent={isParent}
+        isSmallScreen={isSmallScreen}
+        onClick={handleNext}
+      />
       {showMatchModal && (
         <MatchModal
           avatars={[childAvatar, parentAvatar]}

@@ -8,7 +8,6 @@ const Start = () => {
 
   return (
     <StartWrapper>
-
       <>
         <StyledBanner isSmallScreen={isSmallScreen} />
         <StartContent />

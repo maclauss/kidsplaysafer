@@ -10,6 +10,7 @@ export const IntroWrapper = styled.div`
   height: 100vh;
   background-image: url(${Background});
   background-size: cover;
+  height: ${({ isSmallScreen }) => (isSmallScreen ? "" : "785px")};
 `;
 
 export const StyledTop = styled(Top)`
@@ -20,7 +21,7 @@ export const StyledTop = styled(Top)`
 
 export const StyledBottom = styled(Bottom)`
   position: absolute;
-  bottom: -180px;
+  bottom: -150px;
 `;
 
 export const StyledDesktopTop = styled(DesktopTop)`
@@ -30,7 +31,7 @@ export const StyledDesktopTop = styled(DesktopTop)`
 export const StyledDesktopBottom = styled(DesktopBottom)`
   width: 60%;
   position: absolute;
-  bottom: -16px;
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
 `;

@@ -80,7 +80,7 @@ const MatchModal = ({
             End Quiz
           </StyledButton>
         ) : (
-          <StyledButton onClick={handleClose}>Next Question</StyledButton>
+          <StyledButton onClick={handleClose} isSmallScreen={isSmallScreen}>Next Question</StyledButton>
         )}
       </MatchModalWrapper>
       {showReviewModal && (

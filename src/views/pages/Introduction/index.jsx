@@ -12,8 +12,9 @@ import IntroductionContent from "../../fragments/IntroductionContent";
 
 const Introduction = () => {
   const { isSmallScreen } = useScreenSize();
+  
   return (
-    <IntroWrapper>
+    <IntroWrapper isSmallScreen={isSmallScreen}	>
       <>
         {!isSmallScreen && (
           <>

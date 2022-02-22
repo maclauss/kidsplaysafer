@@ -7,7 +7,7 @@ import { ReactComponent as desktopConfetti } from "../../assets/icons/desktopCon
 import { ReactComponent as DesktopBottom } from "../../assets/icons/console.svg";
 
 export const MatchModalWrapper = styled.div`
-  height: 100vh;
+  height: 105vh;
   width: 100%;
   background-image: url(${Background});
   background-size: cover;

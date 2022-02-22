@@ -52,15 +52,7 @@ const QUESTIONS = [
     question: "What will you do before you start playing a game?",
     answers: ["Tell mummy/daddy", "Play the new game", "Don't play"],
   },
-  {
-    question: "You received a message to play a new game. What should you do?",
-    answers: [
-      "Tell mummy/daddy",
-      "Click and play the new game",
-      "Do nothing / I don't know",
-      "Delete/Close the message",
-    ],
-  },
+
   {
     question:
       "You saw something scary while playing the game. What should you do?",

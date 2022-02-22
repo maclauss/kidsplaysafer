@@ -51,6 +51,7 @@ export const Question = styled.div`
   max-height: 150px;
   width: ${({ isSmallScreen }) => (isSmallScreen ? "250px" : "600px")};
   padding: 10px;
+  margin-top: 30px;
   margin-bottom: 16px;
   border-radius: 15px;
   display: flex;
@@ -93,7 +94,7 @@ export const Choice = styled.div`
 export const StyledNextButton = styled(NextButton)`
   position: absolute;
   left: 50%;
-  top: ${({ isSmallScreen }) => (isSmallScreen ? "610px" : "650px")};
+  top: ${({ isSmallScreen }) => (isSmallScreen ? "625px" : "680px")};
   transform: translateX(-50%);
   height: 35px;
   width: 35px;

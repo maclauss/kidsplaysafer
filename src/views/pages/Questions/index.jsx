@@ -13,7 +13,7 @@ import QuestionsContent from "../../fragments/QuestionsContent";
 const Questions = () => {
   const { isSmallScreen } = useScreenSize();
   return (
-    <QuestionsWrapper>
+    <QuestionsWrapper isSmallScreen={isSmallScreen}	>
       <>
         {!isSmallScreen && (
           <>

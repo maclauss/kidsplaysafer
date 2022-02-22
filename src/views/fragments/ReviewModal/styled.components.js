@@ -15,16 +15,16 @@ export const StyledTop = styled(Top)`
 
 export const StyledBottom = styled(Bottom)`
   position: absolute;
-  bottom: -16px;
+  bottom: -5px;
 `;
 
 export const StyledDesktopBottom = styled(DesktopBottom)`
   position: absolute;
-  bottom: 0;
+  bottom: -30px;
 `;
 
 export const ReviewModalWrapper = styled.div`
-  height: 100vh;
+  height: 105vh;
   width: 100%;
   background-color: #000000;
   position: absolute;
@@ -49,6 +49,23 @@ export const StyledBackButton = styled(BackButton)`
   z-index: 4;
 `;
 
+export const StyledBackButton2 = styled(BackButton)`
+  position: absolute;
+  bottom: 50px;
+  height: 35px;
+  width: 35px;
+  z-index: 4;
+`;
+
+export const StyledBackButtonSideText = styled.p`
+  position: absolute;
+  bottom: 25px;
+  margin-left: 80px;
+  height: 35px;
+  width: 35px;
+  color: white;
+  z-index: 4;
+`;
 export const QuestionNumber = styled.div`
   margin: 36px 0 16px;
   margin-top: ${({ isSmallScreen }) => (isSmallScreen ? "" : "80px")};
@@ -113,7 +130,7 @@ export const Blank = styled.div`
 
 export const Choice = styled.div`
   height: 50px;
-  width: ${({ isSmallScreen }) => (isSmallScreen ? "250px" : "600px")};
+  width: ${({ isSmallScreen }) => (isSmallScreen ? "265px" : "600px")};
   padding-left: 15px;
   border-radius: 50px;
   display: flex;

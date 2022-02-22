@@ -10,7 +10,6 @@ export const QuestionsWrapper = styled.div`
   height: 100vh;
   background-image: url(${Background});
   background-size: cover;
-  height: ${({ isSmallScreen }) => (isSmallScreen ? "" : "785px")};
 `;
 
 export const StyledTop = styled(Top)`

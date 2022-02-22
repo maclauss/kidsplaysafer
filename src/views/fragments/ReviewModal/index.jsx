@@ -15,7 +15,7 @@ import {
   Choice,
   Blank,
   StyledBackButton2,
-  StyledBackButtonSideText
+  StyledBackButtonSideText,
 } from "./styled.components";
 import Navbar from "../Navbar";
 
@@ -71,7 +71,14 @@ const ReviewModal = ({
           );
         })}
       </ModalContent>
-      {isSmallScreen ? "" : <><StyledBackButton2 onClick={handleBack}></StyledBackButton2><StyledBackButtonSideText>back</StyledBackButtonSideText></>}
+      {isSmallScreen ? (
+        ""
+      ) : (
+        <>
+          <StyledBackButton2 onClick={handleBack}></StyledBackButton2>
+          <StyledBackButtonSideText>Back</StyledBackButtonSideText>
+        </>
+      )}
     </ReviewModalWrapper>
   );
 };

@@ -36,13 +36,3 @@ export const Share = styled.div`
   margin-bottom: 16px;
   color: #ffffff;
 `;
-
-export const ShareButton = styled.button`
-  height: 40px;
-  width: 120px;
-  padding: 5px 30px;
-  border-radius: 15px;
-  border: none;
-  background-color: #00ffff;
-  font-size: 24px;
-`;

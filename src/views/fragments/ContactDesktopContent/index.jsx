@@ -9,7 +9,7 @@ import {
 } from "./styled.components";
 
 const contactDetails = [
-  { svg: <StyledEmail />, description: "kidsplaysafer@gmail.com" },
+  { svg: <StyledEmail />, description: "kidsplaysafest@gmail.com" },
   { svg: <StyledWeb />, description: "kidsplaysafer.sg" },
 ];
 

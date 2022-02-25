@@ -36,15 +36,6 @@ const QUESTIONS = [
   },
   {
     question:
-      "What will I (Mummy/Daddy) say if you ask me to play computer games with you?",
-    answers: [
-      "Yes! Let's play!",
-      "Play for a little bit",
-      "Don't want to play",
-    ],
-  },
-  {
-    question:
       "Your friend asks you to play a different game. What should you do?",
     answers: ["Ask mummy/daddy if it is ok", "Play the new game", "Don't play"],
   },

@@ -53,6 +53,7 @@ const QuestionsContent = () => {
     if (step % 2 !== 0) {
       setShowMatchModal(true);
       answers[index].parent = questions[index].answers[selected];
+      answers[index].question = questions[index].question;
     } else {
       answers[index] = { child: questions[index].answers[selected] };
     }
@@ -65,7 +66,7 @@ const QuestionsContent = () => {
   };
 
   const handleEnd = () => {
-    navigate(MAILER_FORM, { state: {}, replace: true });
+    navigate(MAILER_FORM, { state: { answers }, replace: true });
   };
 
   useEffect(() => {

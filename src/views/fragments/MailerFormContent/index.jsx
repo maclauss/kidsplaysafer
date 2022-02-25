@@ -1,5 +1,8 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { collection, addDoc } from "firebase/firestore";
+
+import { db } from "../../../firebase";
 import { useScreenSize } from "../../../hooks/useScreenSize";
 
 import ROUTE_NAMES from "../../../constants/routeNames";
@@ -15,11 +18,21 @@ import {
 
 const { PLAY_AGAIN } = ROUTE_NAMES;
 
+const usersRef = collection(db, "users");
+const answersRef = collection(db, "answers");
+
 const MailerFormContent = () => {
   const navigate = useNavigate();
+  const { state } = useLocation();
   const { isSmallScreen } = useScreenSize();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+
+  const answers = {};
+  state.answers.forEach((answer, i) => {
+    answers[`question${i + 1}`] = answer;
+    console.log(answers);
+  });
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -35,7 +48,20 @@ const MailerFormContent = () => {
     }
   };
 
+  const handleSubmit = async () => {
+    const userRef = await addDoc(usersRef, {
+      name,
+      email,
+    });
+    addDoc(answersRef, {
+      user: userRef.id,
+      ...answers,
+    });
+    navigate(PLAY_AGAIN);
+  };
+
   const handleClick = () => {
+    addDoc(answersRef, answers);
     navigate(PLAY_AGAIN);
   };
 
@@ -62,7 +88,9 @@ const MailerFormContent = () => {
         onChange={handleChange}
         isSmallScreen={isSmallScreen}
       />
-      <Submit isSmallScreen={isSmallScreen}>Submit</Submit>
+      <Submit isSmallScreen={isSmallScreen} onClick={handleSubmit}>
+        Submit
+      </Submit>
       <Skip onClick={handleClick}>Skip</Skip>
     </MailerFormContentWrapper>
   );

@@ -15,7 +15,7 @@ import {
 const { HOME } = ROUTE_NAMES;
 
 const contactDetails = [
-  { svg: <StyledEmail />, description: "kidsplaysafer@gmail.com" },
+  { svg: <StyledEmail />, description: "kidsplaysafest@gmail.com" },
   { svg: <StyledWeb />, description: "kidsplaysafer.sg" },
 ];
 

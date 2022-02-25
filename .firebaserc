@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "kidsplaysafer"
+  },
+  "targets": {
+    "kidsplaysafer": {
+      "hosting": {
+        "production": [
+          "kidsplaysafer"
+        ],
+        "staging": [
+          "kidsplaysafer-staging"
+        ]
+      }
+    }
   }
 }

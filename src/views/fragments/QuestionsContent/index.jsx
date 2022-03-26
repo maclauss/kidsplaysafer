@@ -33,8 +33,8 @@ const QuestionsContent = () => {
   const [questionNumber, setQuestionNumber] = useState(1);
   const [selected, setSelected] = useState(5);
   const [isParent, setIsParent] = useState(false);
+  const [DisableNext, setDisableNext] = useState(true)
   const [showMatchModal, setShowMatchModal] = useState(false);
-
   const questions = QUESTIONS.slice(0, 5);
   const usernames = state.usernames,
     [childUsername, parentUsername] = usernames;
@@ -45,6 +45,7 @@ const QuestionsContent = () => {
 
   const handleSelect = (i) => {
     setSelected(i);
+    setDisableNext(false);
   };
 
   const handleNext = () => {
@@ -108,11 +109,18 @@ const QuestionsContent = () => {
         </>
       </QuestionsContentWrapper>
       {/* TODO - refactor isParent prop on next button */}
-      <StyledNextButton
-        isParent={isParent}
-        isSmallScreen={isSmallScreen}
-        onClick={handleNext}
-      />
+      <div>
+        {!DisableNext && (
+          <StyledNextButton
+          isParent={isParent}
+          isSmallScreen={isSmallScreen}
+          onClick={handleNext}
+          disabled={DisableNext}
+        />
+        )
+        }
+      </div>
+      
       {showMatchModal && (
         <MatchModal
           avatars={[childAvatar, parentAvatar]}

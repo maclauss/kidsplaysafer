@@ -23,8 +23,8 @@ export const StyledBottom = styled(Bottom)`
   bottom: -150px;
 `;
 
-export const StyledDesktopTop = styled(DesktopTop)`
-  width: 40%;
+export const StyledDesktopTop = styled(Top)`
+  width: 23%;
 `;
 
 export const StyledDesktopBottom = styled(DesktopBottom)`

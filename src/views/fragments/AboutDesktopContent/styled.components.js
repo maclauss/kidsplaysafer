@@ -20,10 +20,11 @@ export const About = styled.div`
 `;
 
 export const ParagraphContainer = styled.div`
-  overflow: scroll;
+  overflow: auto;
   height: 300px;
   width: 900px;
   padding: 0 20px;
+  margin-bottom: 32px;
 `;
 
 export const Paragraph = styled.div`
@@ -34,4 +35,14 @@ export const Paragraph = styled.div`
   &:not(:last-child) {
     margin-bottom: 16px;
   }
+`;
+
+export const FooterContent = styled.div`
+  color: #ffffff;
+  text-align: center;
+`;
+
+export const StyledLogo = styled.img`
+  width: 200px;
+  filter: brightness(0) invert(1);
 `;

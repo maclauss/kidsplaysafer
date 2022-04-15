@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 import ROUTE_NAMES from "../../../constants/routeNames";
+import DigitalForLife from "../../assets/icons/digitalForLife.png";
 
 import {
   StyledBackButton,
@@ -8,6 +9,8 @@ import {
   About,
   Paragraph,
   ParagraphContainer,
+  FooterContent,
+  StyledLogo,
 } from "./styled.components";
 
 const { HOME } = ROUTE_NAMES;
@@ -46,6 +49,8 @@ const AboutContent = () => {
           </Paragraph>
           <Paragraph>Their answers might surprise you.</Paragraph>
         </ParagraphContainer>
+        <FooterContent>In support of</FooterContent>
+        <StyledLogo src={DigitalForLife} />
       </AboutContentWrapper>
     </>
   );

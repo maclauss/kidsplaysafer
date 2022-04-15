@@ -1,8 +1,12 @@
+import DigitalForLife from "../../assets/icons/digitalForLife.png";
+
 import {
   AboutContentWrapper,
   About,
   Paragraph,
   ParagraphContainer,
+  FooterContent,
+  StyledLogo,
 } from "./styled.components";
 
 const AboutDesktopContent = () => {
@@ -31,6 +35,8 @@ const AboutDesktopContent = () => {
         </Paragraph>
         <Paragraph>Their answers might surprise you.</Paragraph>
       </ParagraphContainer>
+      <FooterContent>In support of</FooterContent>
+      <StyledLogo src={DigitalForLife} />
     </AboutContentWrapper>
   );
 };

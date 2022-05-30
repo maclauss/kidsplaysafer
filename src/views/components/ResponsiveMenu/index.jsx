@@ -30,7 +30,7 @@ export default function ResponsiveMenu() {
         display: { xs: 'none', md: 'flex' },
         padding: '27px 50px'
       }}>
-        <Box><Typography sx={{ fontFamily: 'Audiowide' }} variant="h4" color='white'>LOGO</Typography></Box>
+        <Box><Typography variant="h4" color='white'>LOGO</Typography></Box>
         <Box sx={{ flexGrow: 1 }}></Box>
         <Button onClick={navigateToHome}>Home</Button>
         <Button onClick={navigateToAbout}>About</Button>
@@ -41,39 +41,70 @@ export default function ResponsiveMenu() {
       </Box>
       <Box sx={{
         display: { xs: 'flex', md: 'none' },
-        padding: '27px 50px'
+        padding: '16px'
       }}>
-        <Box><Typography sx={{ fontFamily: 'Audiowide' }} variant="h4" color='white'>LOGO</Typography></Box>
+        <Box alignSelf="center"><Typography variant="h4" color='white'>LOGO</Typography></Box>
         <Box sx={{ flexGrow: 1 }}></Box>
         <IconButton onClick={toggleDrawer} size="small" sx={{ ml: 2 }}>
           <MenuIcon sx={{ width: 32, height: 32 }} />
         </IconButton>
-        <Drawer anchor="right" open={open} onClose={toggleDrawer}>
+        <Drawer
+          anchor="right"
+          open={open}
+          onClose={toggleDrawer}>
           <Box sx={{ width: '275px' }} role="presentation" onClick={toggleDrawer}>
             <List>
               <ListItem>
                 <ListItemButton onClick={navigateToHome}>
-                  <ListItemText sx={{ textAlign: 'right' }} primary="Home" />
+                  <ListItemText
+                    primaryTypographyProps={{ variant: 'h4' }}
+                    sx={{ textAlign: 'right' }}
+                    primary="Home" />
                 </ListItemButton>
               </ListItem>
-              <ListItem><ListItemButton onClick={navigateToAbout}>
-                <ListItemText sx={{ textAlign: 'right' }} primary="About" />
-              </ListItemButton></ListItem>
-              <ListItem><ListItemButton disabled>
-                <ListItemText sx={{ textAlign: 'right' }} primary="Blog" />
-              </ListItemButton></ListItem>
-              <ListItem><ListItemButton onClick={navigateToResources}>
-                <ListItemText sx={{ textAlign: 'right' }} primary="Resources" />
-              </ListItemButton></ListItem>
-              <ListItem><ListItemButton onClick={navigateToContact}>
-                <ListItemText sx={{ textAlign: 'right' }} primary="Contact" />
-              </ListItemButton></ListItem>
+              <ListItem>
+                <ListItemButton onClick={navigateToAbout}>
+                  <ListItemText
+                    primaryTypographyProps={{ variant: 'h4' }}
+                    sx={{ textAlign: 'right' }}
+                    primary="About" />
+                </ListItemButton>
+              </ListItem>
+              <ListItem>
+                <ListItemButton disabled>
+                  <ListItemText
+                    primaryTypographyProps={{ variant: 'h4' }}
+                    sx={{ textAlign: 'right' }}
+                    primary="Blog" />
+                </ListItemButton>
+              </ListItem>
+              <ListItem>
+                <ListItemButton onClick={navigateToResources}>
+                  <ListItemText
+                    primaryTypographyProps={{ variant: 'h4' }}
+                    sx={{ textAlign: 'right' }}
+                    primary="Resources" />
+                </ListItemButton>
+              </ListItem>
+              <ListItem>
+                <ListItemButton onClick={navigateToContact}>
+                  <ListItemText
+                    primaryTypographyProps={{ variant: 'h4' }}
+                    sx={{ textAlign: 'right' }}
+                    primary="Contact" />
+                </ListItemButton>
+              </ListItem>
             </List>
             <Divider />
             <List>
-              <ListItem><ListItemButton disabled>
-                <ListItemText sx={{ textAlign: 'right' }} primary="Login" />
-              </ListItemButton></ListItem>
+              <ListItem>
+                <ListItemButton disabled>
+                  <ListItemText
+                    primaryTypographyProps={{ variant: 'h4' }}
+                    sx={{ textAlign: 'right' }}
+                    primary="Login" />
+                </ListItemButton>
+              </ListItem>
             </List>
           </Box>
         </Drawer>
